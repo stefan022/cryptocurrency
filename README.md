@@ -1,1 +1,12 @@
-# cryptocurrency
+"@ant-design/icons": "^4.8.0",
+"@reduxjs/toolkit": "^1.9.1",
+"antd": "^5.0.5",
+"axios": "^1.2.1",
+"chart.js": "^4.0.1",
+"html-react-parser": "^3.0.4",
+"millify": "^5.0.1",
+"moment": "^2.29.4",
+"react-chartjs-2": "^5.0.1",
+"react-redux": "^8.0.5",
+"react-router-dom": "^6.4.4",
+"uuid": "^9.0.0"
