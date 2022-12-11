@@ -1,6 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 // RapidAPi = Bing News Search
+// https://rapidapi.com/microsoft-azure-org-microsoft-cognitive-services/api/bing-news-search1?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel
 const options = {
     'X-BingApis-SDK': 'true',
     'X-RapidAPI-Key': 'ff01b51037msh90266f52c1f1db1p1d3494jsnc84434e26ce9',
