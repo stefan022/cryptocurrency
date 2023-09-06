@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 import { useGetCryptoCoinQuery } from '../redux-store/api/crypto'
 
-import { Cryptocurrencies, News } from './index'
+import { Cryptocurrencies, News, Spinner } from './index'
 
 const { Title } = Typography;
 
@@ -14,7 +14,7 @@ const Homepage = () => {
     const { data, isFetching } = useGetCryptoCoinQuery(10);
     const globalStats = data?.data?.stats;
 
-    if (isFetching) return 'Loading...'
+    if (isFetching) return <Spinner/>
 
     return (
     <>

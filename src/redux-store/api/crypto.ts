@@ -5,7 +5,7 @@ import { getOverflowOptions } from 'antd/es/_util/placements';
 // RapidAPi = Coinranking
 // https://rapidapi.com/Coinranking/api/coinranking1?utm_source=youtube.com%2FJavaScriptMastery&utm_medium=DevRel&utm_campaign=DevRel
 const options = {
-    'X-RapidAPI-Key': process.env.REACT_APP_CRYPTO,
+    'X-RapidAPI-Key': import.meta.env.VITE_API_KEY,
     'X-RapidAPI-Host': 'coinranking1.p.rapidapi.com'
 };
 

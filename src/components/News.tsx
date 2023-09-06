@@ -5,6 +5,7 @@ import moment from 'moment/moment'
 
 import { useGetNewsQuery } from '../redux-store/api/news'
 import { useGetCryptoCoinQuery } from '../redux-store/api/crypto'
+import { Spinner } from '.'
 
 const { Text, Title } = Typography;
 const { Option } = Select;
@@ -14,7 +15,7 @@ const News = ({ simplified }) => {
     const { data: cryptoNews } = useGetNewsQuery({ category, count: simplified ? 6 : 12 });
     const { data } = useGetCryptoCoinQuery(100);
 
-    if(!cryptoNews?.value) return 'Loading...'
+    if(!cryptoNews?.value) return <Spinner/>
 
     return (
         <Row gutter={[ 24, 24 ]}>

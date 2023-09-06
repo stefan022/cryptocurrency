@@ -11,6 +11,7 @@ const { Title, Text } = Typography;
 const { Option } = Select; 
 
 import { useGetCryptoDetailsQuery, useGetCryptoHistoryQuery } from '../redux-store/api/crypto'
+import { Spinner } from '.'
 
 const CryptoDetails = () => {
     const { coinId } = useParams();
@@ -19,7 +20,7 @@ const CryptoDetails = () => {
     const { data: coinHistory, isFetching } = useGetCryptoHistoryQuery({ coinId, timePeriod });
     // data?.data?.coin
 
-    if(isFetching) return 'Loading...'
+    if(isFetching) return <Spinner/>
 
     const stats = [
         { title: 'Price to USD', value: `$ ${data?.data?.coin?.price && millify(data?.data?.coin?.price)}`, icon: <DollarCircleOutlined /> },

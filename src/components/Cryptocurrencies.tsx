@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Card, Row, Col, Input } from "antd";
 
 import { useGetCryptoCoinQuery } from "../redux-store/api/crypto";
+import { Spinner } from ".";
 
 const Cryptocurrencies = ({ simplified }) => {
     const count = simplified ? 10 : 100;
@@ -23,7 +24,7 @@ const Cryptocurrencies = ({ simplified }) => {
     // prekida se ponovno učitavanje podataka
     // [] => radi samo prvi put kad se stranica učita
     
-    if (isFetching) return 'Loading...'
+    if (isFetching) return <Spinner/>
     if (error) return 'Sorry, try again!'
 
     return (
